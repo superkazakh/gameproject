@@ -6,7 +6,7 @@ WIDTH = 800
 HEIGHT = 600
 PLAYER_HEALTH = 100
 MOVE_EVENT_TIME = 120
-SPAWN_TIME = 1600
+SPAWN_TIME = 1100
 DMG = 20
 WAVES = 5
 pygame.init()
@@ -215,6 +215,7 @@ while running:
                 enemies.add(guy)
                 enemy_draw.append(guy)
                 pygame.mixer.Channel(2).play(pygame.mixer.Sound('img_files/ost.mp3'), loops=-1)
+                pygame.mixer.Channel(2).set_volume(0.7)
             screen.blit(titlescreen.image, (0, 0))
             pygame.display.update()
             pygame.display.flip()
